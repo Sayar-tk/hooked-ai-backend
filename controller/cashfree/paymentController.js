@@ -20,7 +20,7 @@ const newOrderId = async (req, res) => {
           customer_name: req.body.customer_name,
         },
         order_meta: {
-          // return_url: "http://localhost:3000/payment-success",
+          // return_url: "https://viralhooks.in/payment-success",
           notify_url:
             "https://webhook.site/0fd25cd0-935d-4071-ad59-15ce2e71f1ae",
           payment_methods: "cc,dc,upi",
@@ -93,14 +93,14 @@ const checkStatus = async (req, res) => {
         console.log(response.data);
         if (response.data.order_status === "PAID") {
           return res.redirect(
-            `http://localhost:3000/payment-success/${orderid}`
+            `https://viralhooks.in/payment-success/${orderid}`
           );
         } else if (response.data.order_status === "ACTIVE") {
           return res.redirect(
-            `http://localhost:3000/pricing/${response.data.payment_session_id}`
+            `https://viralhooks.in/pricing/${response.data.payment_session_id}`
           );
         } else {
-          return res.redirect("http://localhost:3000/payment-failure");
+          return res.redirect("https://viralhooks.in/payment-failure");
         }
       })
       .catch(function (error) {
