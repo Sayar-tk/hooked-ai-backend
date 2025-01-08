@@ -1,0 +1,28 @@
+{
+  "name": "hooked-ai-backend",
+  "version": "1.0.0",
+  "description": "backend of youtube outlier app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sayar-tk/hooked-ai-backend.git"
+  },
+  "author": "Sayar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sayar-tk/hooked-ai-backend/issues"
+  },
+  "homepage": "https://github.com/Sayar-tk/hooked-ai-backend#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cashfree-pg": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  }
+}
