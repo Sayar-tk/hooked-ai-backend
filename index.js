@@ -1,5 +1,3 @@
-console.log("Starting server.js...");
-
 const express = require("express");
 require("dotenv").config();
 const app = express();
@@ -17,6 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Cashfree Route
 const cashfreeRoute = require("./routes/cashfree/cashfreeRoute");
 app.use("/api", cashfreeRoute);
+
+//YouTube Route
+const youtubeRoute = require("./routes/youtube/youtubeRoute");
+app.use("/api", youtubeRoute);
 
 // Starting Server
 app.listen(port, () => {
