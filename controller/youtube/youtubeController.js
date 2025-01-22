@@ -1,4 +1,5 @@
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
+const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+const axios = require("axios");
 
 const getChannelId = async (req, res) => {
   const { handle } = req.query;
@@ -30,4 +31,8 @@ const getChannelId = async (req, res) => {
     console.error(error.message);
     res.status(500).json({ error: "Failed to fetch channel ID." });
   }
+};
+
+module.exports = {
+  getChannelId,
 };
