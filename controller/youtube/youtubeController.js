@@ -1,4 +1,3 @@
-const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 const axios = require("axios");
 
 const getChannelId = async (req, res) => {
@@ -12,9 +11,9 @@ const getChannelId = async (req, res) => {
 
   try {
     // Construct the YouTube API URL
-    const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&key=${YOUTUBE_API_KEY}&forHandle=${encodeURIComponent(
-      handle
-    )}`;
+    const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&key=${
+      process.env.YOUTUBE_API_KEY
+    }&forHandle=${encodeURIComponent(handle)}`;
 
     console.log("apiUrl: " + apiUrl);
 
