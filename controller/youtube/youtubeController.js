@@ -16,6 +16,8 @@ const getChannelId = async (req, res) => {
       handle
     )}`;
 
+    console.log("apiUrl: " + apiUrl);
+
     // Call the YouTube API
     const response = await axios.get(apiUrl);
 
