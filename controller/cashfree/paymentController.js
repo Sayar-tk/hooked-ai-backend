@@ -1,6 +1,7 @@
 const axios = require("axios");
 
 const newOrderId = async (req, res) => {
+  console.log("CASHFREE_CLIENT_ID", process.env.CASHFREE_CLIENT_ID);
   try {
     const options = {
       method: "POST",
